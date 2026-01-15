@@ -19,11 +19,10 @@ addTaskButton.addEventListener('click', addTask)
 
   function loadTasks() {
     const storedTasks = localStorage.getItem(STORAGE_KEY);
-
     if (storedTasks) {
       const tasks = JSON.parse(storedTasks);
-
       tasks.forEach(function (task) {
+    createTaskElement(task.text,task.completed)
         console.log(task);
       });
     }
