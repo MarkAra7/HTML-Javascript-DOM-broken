@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addTaskButton = document.getElementById("addTaskButton");
   const STORAGE_KEY = "todoTasks";
   const taskListContainer =document.getElementById('taskList')
-addTaskButton.addEventListener('click', createTaskElement)
+addTaskButton.addEventListener('click', addTask)
   function saveTasks() {
     let tasks = [];
     const listItems = taskListContainer.querySelectorAll("li");
